@@ -86,7 +86,8 @@
         opacity: .7;
       }
     </style>
-    <radialGradient id="radial-gradient" cx="295.33" cy="293.5" fx="295.33" fy="293.5" r="378.1" gradientUnits="userSpaceOnUse">
+    <radialGradient id="radial-gradient" cx="295.33" cy="293.5
+    " fx="295.33" fy="293.5" r="378.1" gradientUnits="userSpaceOnUse">
       <stop offset=".15" stop-color="#fff"/>
       <stop offset=".17" stop-color="#e2e6e1"/>
       <stop offset=".21" stop-color="#b9c3b8"/>
@@ -99,17 +100,7 @@
       <stop offset=".67" stop-color="#20401d"/>
       <stop offset="1" stop-color="#1f3f1c"/>
     </radialGradient>
-    <radialGradient id="radial-gradient-2" cx="373.93" cy="356.81" fx="373.93" fy="356.81" r="14.36" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset=".12" stop-color="#f4f4f4"/>
-      <stop offset=".34" stop-color="#d8d9d9"/>
-      <stop offset=".56" stop-color="#b5b6b6"/>
-      <stop offset=".6" stop-color="#b7bab6"/>
-      <stop offset=".65" stop-color="#bfc7b9"/>
-      <stop offset=".69" stop-color="#ccddbd"/>
-      <stop offset=".71" stop-color="#d3e8bf"/>
-      <stop offset=".79" stop-color="#fff"/>
-    </radialGradient>
+
     <radialGradient id="radial-gradient-3" cx="160.92" cy="390.57" fx="160.92" fy="390.57" xlink:href="#radial-gradient-2"/>
     <radialGradient id="radial-gradient-4" cx="271.25" cy="242.01" fx="271.25" fy="242.01" xlink:href="#radial-gradient-2"/>
     <radialGradient id="radial-gradient-5" cx="203.24" cy="257.32" fx="203.24" fy="257.32" r="14.36" xlink:href="#radial-gradient-2"/>

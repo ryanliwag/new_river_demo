@@ -61,6 +61,10 @@
         r: 0;
       }
 
+      .group-dotted-circles {
+               stroke-width: .25px;
+      }
+
       .group-text-circle {
         fill: none;
         stroke: white;
@@ -284,7 +288,7 @@
           id="image"
           width="1080"
           height="1080"
-          xlink:href="../../Assets/4.png"
+          xlink:href="Assets/4.png"
         />
       </defs>
       <g id="Background">
@@ -767,10 +771,11 @@
 
       document.addEventListener("DOMContentLoaded", function () {
         let tl = gsap.timeline({});
-        tl.to(".group-circle", { opacity: 0 });
+        gsap.set(".group-circle", { opacity: 0 });
 
         tl.from("#logo", {
           scale: 100,
+          opacity: 0,
           duration: 1,
           transformOrigin: "50% 50%",
           ease: "power3.out",
@@ -809,7 +814,8 @@
             scale: 0,
             x: 294.86,
             y: 295.05,
-            stagger: 0.1,
+            duration:1,
+            stagger: 0.07,
           },
           ">-0.2"
         );
@@ -827,14 +833,14 @@
           ">-0.8"
         );
 
-        tl.from("#Plant", { scale: 0, ease: "power2.out" });
+        tl.from("#Plant", { scale: 0, ease: "power2.out" }, "<");
 
         tl.from(
           "#links > g > .group-text",
           {
             scale: 0,
             duration: 0.5,
-            stagger: 0.1,
+            stagger: 0.05,
             ease: "power2.out",
             transformOrigin: "50% 50%",
           },
