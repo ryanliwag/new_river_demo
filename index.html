@@ -39,6 +39,9 @@
         object-fit: cover; /* Cover the area, maintain aspect ratio */
       }
 
+      #Gradient_Link {
+        opacity: 0.5;
+      }
       /* General styling for the text elements */
       .curved-label {
         fill: white;
@@ -90,9 +93,21 @@
       #Icons {
         pointer-events: none; /* Ignore all mouse events on the container */
       }
-
+      #MainIcons {
+        pointer-events: none; /* Ignore all mouse events on the container */
+      }
       .overlay-circle {
         r: 0;
+      }
+
+      .group-icon {
+        scale: 1.5;
+        transform-origin: center center;
+      }
+
+      #logo {
+        scale: 1.2;
+        transform-origin: center center;
       }
 
       .group-dotted-circles {
@@ -184,6 +199,19 @@
 
       .group-circle-large-text0 {
         fill: url(#radial-gradient-7);
+      }
+
+      .podcast-icon-circle {
+        fill: url(#radial-gradient-11);
+      }
+      .insight-icon-circle {
+        fill: url(#radial-gradient-12);
+      }
+      .library-icon-circle {
+        fill: url(#radial-gradient-13);
+      }
+      .training-icon-circle {
+        fill: url(#radial-gradient-14);
       }
     </style>
   </head>
@@ -322,11 +350,61 @@
           <stop offset=".05" stop-color="#02ad73" />
           <stop offset=".75" stop-color="#2e776b" />
         </radialGradient>
+        <radialGradient
+          id="radial-gradient-11"
+          cx="393.77"
+          cy="426.87"
+          fx="393.77"
+          fy="426.87"
+          r="40"
+          gradientTransform="translate(0,0)"
+          gradientUnits="userSpaceOnUse"
+          xlink:href="#radial-gradient-2"
+        ></radialGradient>
+        <radialGradient
+          id="radial-gradient-12"
+          cx="496.3"
+          cy="183.36"
+          fx="496.3"
+          fy="183.36"
+          r="40"
+          gradientTransform="translate(0,0)"
+          gradientUnits="userSpaceOnUse"
+          xlink:href="#radial-gradient-2"
+        ></radialGradient>
+        <radialGradient
+          id="radial-gradient-13"
+          cx="122.81"
+          cy="445.28"
+          fx="122.81"
+          fy="445.28"
+          r="40"
+          gradientTransform="translate(0,0)"
+          gradientUnits="userSpaceOnUse"
+          xlink:href="#radial-gradient-2"
+        ></radialGradient>
+        <radialGradient
+          id="radial-gradient-14"
+          cx="165.35"
+          cy="107.93"
+          fx="165.35"
+          fy="107.93"
+          r="40"
+          gradientTransform="translate(0,0)"
+          gradientUnits="userSpaceOnUse"
+          xlink:href="#radial-gradient-2"
+        ></radialGradient>
         <image
           id="image"
           width="1080"
           height="1080"
           xlink:href="Assets/4.png"
+        />
+        <image
+          id="image-2"
+          width="198"
+          height="407"
+          xlink:href="Assets/Windmill.png"
         />
       </defs>
       <g id="Background">
@@ -365,7 +443,7 @@
             class="axis-line-v"
             x1="294.27"
             y1="198.81"
-            x2="295.44"
+            x2="294.27"
             y2="391.28"
           />
           <path
@@ -374,11 +452,41 @@
           />
           <path
             class="axis-circle circle-right"
-            d="M293.56,391.2c0,1.04.85,1.87,1.89,1.87,1.04,0,1.87-.85,1.87-1.89,0-1.04-.85-1.87-1.89-1.87s-1.87.85-1.87,1.89Z"
+            d="M292.39,391.2c0,1.04.85,1.87,1.89,1.87,1.04,0,1.87-.85,1.87-1.89,0-1.04-.85-1.87-1.89-1.87s-1.87.85-1.87,1.89Z"
           />
         </g>
       </g>
       <g id="Fixed">
+        <image
+          id="Gradient_Link"
+          data-name="Gradient Link"
+          width="1080"
+          height="1080"
+          transform="translate(190.8 191.2) scale(.193)"
+          xlink:href="/Assets/5.png"
+        ></image>
+
+        <g class="windmill">
+          <use
+            transform="translate(418.2 64.4) scale(.09)"
+            xlink:href="#image-2"
+          />
+          <use
+            transform="translate(434.43 68.66) scale(.12)"
+            xlink:href="#image-2"
+          />
+          <use
+            transform="translate(449.74 104.66) scale(.05)"
+            xlink:href="#image-2"
+          />
+          <image
+            width="424"
+            height="90"
+            transform="translate(415.1 83.43) rotate(39.03) scale(.18)"
+            xlink:href="Assets/Grass.png"
+          />
+        </g>
+
         <g class="group-dotted-circles">
           <circle class="cls-7" cx="294.86" cy="295.05" r="59.03" />
           <circle class="cls-7" cx="294.86" cy="295.05" r="98.4" />
@@ -635,10 +743,77 @@
           </g>
         </g>
       </g>
+
+      <g id="MainIcons">
+        <g id="podcast-icon">
+          <circle
+            class="podcast-icon-circle background-circle"
+            cx="393.77"
+            cy="426.87"
+            r="23.02"
+          />
+          <image
+            width="99"
+            height="155"
+            transform="translate(382.78 409.67) scale(.22)"
+            xlink:href="Assets/Podcast.png"
+          />
+        </g>
+        <g id="insight-icon">
+          <circle
+            class="insight-icon-circle background-circle"
+            cx="496.3"
+            cy="183.36"
+            r="23.02"
+          />
+          <image
+            width="84"
+            height="126"
+            transform="translate(487.01 169.43) scale(.22)"
+            xlink:href="Assets/Insights.png"
+          />
+        </g>
+        <g id="library-icon">
+          <circle
+            class="library-icon-circle background-circle"
+            cx="122.81"
+            cy="445.28"
+            r="23.02"
+          />
+
+          <image
+            width="108"
+            height="114"
+            transform="translate(106.04 427.57) scale(.31)"
+            xlink:href="Assets/Library.png"
+          />
+        </g>
+        <g id="training-icon">
+          <circle
+            class="training-icon-circle background-circle"
+            cx="165.35"
+            cy="107.93"
+            r="23.02"
+          />
+          <image
+            width="166"
+            height="126"
+            transform="translate(149.77 96.1) scale(.19)"
+            xlink:href="Assets/Training.png"
+          />
+        </g>
+      </g>
+
       <g id="Elements">
         <g id="Icons">
           <g id="energy" class="icon">
-            <circle
+            <image
+              width="246"
+              height="251"
+              transform="translate(459.58 427.5) scale(.12)"
+              xlink:href="Assets/farming.png"
+            />
+            <!-- <circle
               class="cls-14 gradient-circle"
               cx="418.32"
               cy="401.2"
@@ -648,7 +823,7 @@
             <polygon
               class="cls-18"
               points="418.14 401.38 414.52 401.04 417.52 394.47 421.63 394.47 419.3 398.24 423.48 398.7 415.8 407.93 418.14 401.38"
-            />
+            /> -->
           </g>
 
           <g id="mountain" class="icon">
@@ -666,7 +841,14 @@
           </g>
 
           <g id="grain" class="icon">
-            <circle
+            <image
+              width="949"
+              height="844"
+              transform="translate(59.71 344.74) scale(.03)"
+              xlink:href="Assets/WorldBee.png"
+            />
+
+            <!-- <circle
               class="cls-15 gradient-circle"
               cx="241.72"
               cy="212.48"
@@ -677,7 +859,7 @@
             <path
               class="cls-18"
               d="M241.91,209.29c.71.05,1.04-.1,1.2-1.19-.65.17-1.33.2-1.2,1.19h0ZM238.48,216c.77-.22,1.05-.51.79-1.73-.61.44-1.32.74-.79,1.73h0ZM237.99,214.7c.77-.22,1.05-.51.79-1.73-.61.44-1.32.74-.79,1.73h0ZM237.52,213.44c.68-.2.94-.45.71-1.54-.55.39-1.17.65-.71,1.54h0ZM237.1,212.31c.6-.17.83-.4.63-1.37-.49.35-1.04.58-.63,1.37h0ZM236.72,211.31c.56-.16.77-.38.58-1.27-.45.32-.97.54-.58,1.27h0ZM236.23,210.57c-.65-.16-.9-.62-.58-1.53.35.16,1.17.7.58,1.53h0ZM238.15,216.12c-.72.34-1.13.31-1.74-.79.75-.07,1.48-.31,1.74.79h0ZM237.66,214.83c-.72.34-1.13.31-1.74-.79.75-.07,1.48-.31,1.74.79h0ZM237.19,213.56c-.64.3-1,.27-1.54-.7.67-.07,1.31-.27,1.54.7h0ZM236.77,212.43c-.57.27-.89.24-1.37-.62.59-.06,1.17-.24,1.37.62h0ZM236.4,211.43c-.53.25-.83.22-1.28-.58.55-.05,1.09-.23,1.28.58h0ZM244.96,216.03c-.77-.22-1.05-.51-.79-1.73.61.44,1.32.74.79,1.73h0ZM245.44,214.74c-.77-.22-1.05-.51-.79-1.73.61.44,1.32.74.79,1.73h0ZM245.92,213.47c-.68-.2-.94-.45-.71-1.54.55.39,1.17.65.71,1.54h0ZM246.34,212.34c-.6-.17-.83-.4-.63-1.37.49.34,1.04.58.63,1.37h0ZM246.71,211.34c-.56-.16-.77-.38-.58-1.27.45.32.97.54.58,1.27h0ZM247.2,210.6c.65-.16.9-.62.58-1.53-.35.16-1.17.7-.58,1.53h0ZM245.29,216.15c.72.34,1.13.31,1.74-.79-.75-.07-1.48-.31-1.74.79h0ZM245.77,214.86c.72.34,1.13.31,1.74-.79-.75-.07-1.48-.31-1.74.79h0ZM246.24,213.59c.64.3,1,.27,1.54-.7-.67-.07-1.31-.27-1.54.7h0ZM246.66,212.46c.57.27.89.24,1.37-.62-.59-.06-1.17-.24-1.37.62h0ZM247.04,211.46c.53.25.83.23,1.28-.58-.55-.05-1.09-.23-1.28.58h0ZM241.5,215.87c0-.11.09-.2.2-.2s.2.09.2.2v2.51c0,.11-.09.2-.2.2s-.2-.09-.2-.2v-2.51h0ZM238.38,216.71c-.04-.11,0-.22.11-.27.11-.04.22,0,.27.11.08.2.18.4.27.6.19.4.38.8.49,1.24.03.11-.04.22-.15.25-.11.03-.22-.04-.25-.15-.1-.4-.28-.78-.46-1.16-.1-.2-.19-.41-.28-.62h0ZM244.65,216.55c.04-.11.16-.16.27-.11.11.04.16.16.11.27-.08.21-.18.41-.28.62-.18.39-.37.78-.47,1.2-.03.11-.14.18-.25.15-.11-.03-.18-.14-.15-.25.11-.46.3-.88.5-1.29.09-.2.19-.4.27-.6h0ZM241.49,215.35c-.96.07-1.41-.13-1.63-1.62.88.23,1.8.28,1.63,1.62h0ZM241.49,213.68c-.96.07-1.41-.13-1.63-1.62.88.24,1.8.28,1.63,1.62h0ZM241.49,212.04c-.85.07-1.25-.12-1.45-1.44.78.21,1.6.24,1.45,1.44h0ZM241.49,210.58c-.76.06-1.11-.1-1.29-1.28.7.19,1.42.22,1.29,1.28h0ZM241.49,209.29c-.71.05-1.04-.1-1.2-1.19.65.17,1.33.2,1.2,1.19h0ZM241.73,208.25c.67-.45.76-1.09,0-1.98-.33.33-1.02,1.29,0,1.98h0ZM241.91,215.35c.96.07,1.41-.13,1.63-1.62-.88.23-1.81.28-1.63,1.62h0ZM241.91,213.68c.96.07,1.41-.13,1.63-1.62-.88.24-1.81.28-1.63,1.62h0ZM241.91,212.04c.85.07,1.25-.12,1.45-1.44-.78.21-1.6.24-1.45,1.44h0ZM241.91,210.58c.76.06,1.11-.1,1.29-1.28-.7.19-1.42.22-1.29,1.28h0Z"
-            />
+            /> -->
           </g>
 
           <g id="books" class="icon">
@@ -837,16 +1019,19 @@
         gsap.set(".group-circle", { opacity: 0 });
 
         tl.from("#logo", {
-          scale: 100,
           opacity: 0,
           duration: 1,
-          transformOrigin: "50% 50%",
           ease: "power3.out",
         });
         tl.from(
           "#logo-image-background",
           { scale: 0, ease: "power2.out", transformOrigin: "50% 50%" },
           ">-0.3"
+        );
+        tl.from(
+          "#Gradient_Link",
+          { scale: 0, ease: "power2.out", transformOrigin: "50% 50%" },
+          "<"
         );
 
         tl.from(
@@ -899,6 +1084,20 @@
           "<"
         );
 
+        const mainIcons = gsap.utils.toArray("#MainIcons > g");
+
+        tl.from(
+          mainIcons,
+          {
+            opacity: 0,
+            scale: 0,
+            duration: 1,
+            ease: "power2.out",
+            stagger: 0.1,
+          },
+          ">"
+        );
+
         gsap.from(
           ".axis-circle",
           {
@@ -943,6 +1142,11 @@
         );
 
         tl.from("#Plant", { scale: 0, ease: "power2.out" }, "<");
+        tl.from(
+          ".windmill",
+          { scale: 0, ease: "power2.out", transformOrigin: "50% 50%" },
+          "<"
+        );
 
         tl.from(
           "#links > g > .group-text",
@@ -1017,6 +1221,13 @@
           ],
         };
 
+        const mainIconMap = {
+          Podcast: "#podcast-icon",
+          Training: "#training-icon",
+          Insights: "#insight-icon",
+          Library: "#library-icon",
+        };
+
         const linkGroupCenters = {};
         const linkGroups = gsap.utils.toArray("#links > g");
         linkGroups.forEach((group) => {
@@ -1052,6 +1263,30 @@
               scale: 1.2,
               transformOrigin: "50% 50%",
             });
+
+            const mainIconSelector = mainIconMap[linkClass];
+            const mainIcon = document.querySelector(mainIconSelector);
+            const linkCenter = linkGroupCenters[linkClass];
+            const background_mainIcon_circle =
+              mainIcon.querySelector(".background-circle");
+            if (mainIcon && linkCenter) {
+              const iconBBox = mainIcon.getBBox();
+              const iconCenterX = iconBBox.x + iconBBox.width / 2;
+              const iconCenterY = iconBBox.y + iconBBox.height / 2;
+
+              gsap.to(mainIcon, {
+                x: linkCenter.x - iconCenterX,
+                y: linkCenter.y - iconCenterY,
+                duration: 0.5,
+                ease: "power2.out",
+              });
+
+              gsap.to(background_mainIcon_circle, {
+                opacity: 0,
+                duration: 0.5,
+                ease: "power2.out",
+              });
+            }
 
             const iconSelectors = iconLinkMap[linkClass];
             const linkData = linkGroupCenters[linkClass];
@@ -1090,7 +1325,7 @@
 
                 gsap.to(icon_path, {
                   fill: "white",
-                  opacity:1,
+                  opacity: 1,
                   duration: 0.5,
                   ease: "power2.out",
                 });
@@ -1108,6 +1343,26 @@
             const iconSelectors = iconLinkMap[linkClass];
             if (iconSelectors) {
               iconSelectors.forEach((selector) => {
+                const mainIconSelector = mainIconMap[linkClass];
+                const mainIcon = document.querySelector(mainIconSelector);
+                const background_mainIcon_circle =
+                  mainIcon.querySelector(".background-circle");
+
+                if (mainIcon) {
+                  gsap.to(mainIcon, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.5,
+                    ease: "power2.out",
+                  });
+
+                  gsap.to(background_mainIcon_circle, {
+                    opacity: 1,
+                    duration: 0.5,
+                    ease: "power2.out",
+                  });
+                }
+
                 const targetIcon = document.querySelector(selector);
 
                 if (targetIcon) {
@@ -1131,7 +1386,7 @@
 
                 gsap.to(icon_path, {
                   fill: "#34b778",
-                  opacity:0,
+                  opacity: 0,
                   duration: 0.5,
                   ease: "power2.out",
                 });
@@ -1145,18 +1400,28 @@
         const gradient = document.querySelector("#radial-gradient");
         const linkGradients = [
           // Corrected array to match icon circles
-          document.querySelector("#radial-gradient-2"),
+          // document.querySelector("#radial-gradient-2"),
           document.querySelector("#radial-gradient-3"),
           document.querySelector("#radial-gradient-4"),
-          document.querySelector("#radial-gradient-5"),
+          // document.querySelector("#radial-gradient-5"),
           document.querySelector("#radial-gradient-6"),
           document.querySelector("#radial-gradient-7"),
           document.querySelector("#radial-gradient-8"),
           document.querySelector("#radial-gradient-9"), // Corrected ID
+          document.querySelector("#radial-gradient-11"),
+          document.querySelector("#radial-gradient-12"),
+          document.querySelector("#radial-gradient-13"),
+          document.querySelector("#radial-gradient-14"),
         ];
 
         // Get geometric info for each link circle for the 3D effect
-        const linkCircles = gsap.utils.toArray(".icon > .gradient-circle");
+        const linkCircles = gsap.utils.toArray([
+          ".icon > .gradient-circle",
+          ".podcast-icon-circle",
+          ".insight-icon-circle",
+          ".library-icon-circle",
+          ".training-icon-circle",
+        ]);
         console.log(linkCircles);
         const linkGeometries = linkCircles.map((circle, i) => {
           const bbox = circle.getBBox();
